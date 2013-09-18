@@ -1,0 +1,24 @@
+Dependencies
+libewf requires:
+* zlib
+* bzip2
+  (optional for EWF2 support)
+* libcrypto (OpenSSL) or Windows Crypto API (from the Windows Platform SDK)
+  (optional but recommended)
+
+ewftools require:
+* libcrypto (OpenSSL) or Windows Crypto API (from the Windows Platform SDK)
+  (optional but recommended)
+* libuuid or Windows RPC API
+  (optional but recommended)
+
+ewfmount requires:
+* libfuse
+  (optional but recommended)
+
+
+See:
+* http://code.google.com/p/libewf/wiki/Building
+* README.dll
+* README.macosx
+
