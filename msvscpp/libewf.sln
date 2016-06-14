@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libewf_dll", "libewf_dll\libewf_dll.vcxproj", "{B5225323-AC67-411D-8FBA-199E9467FAB5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ewfverify", "ewfverify\ewfverify.vcxproj", "{E47BC48E-4CDC-49CC-B82E-4468DE2540DE}"
@@ -56,8 +58,6 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ewfrecover", "ewfrecover\ewfrecover.vcxproj", "{B8FA75BE-7C57-46C3-8A3E-A0A4D15B84F6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcdata", "libcdata\libcdata.vcxproj", "{B9332DC8-7594-47DF-80C1-38922E0F4DFB}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pyewf", "pyewf\pyewf.vcxproj", "{E221DB4C-B254-47CB-993D-DC7FED580DA1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,14 +291,6 @@ Global
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|Win32.Build.0 = VSDebug|Win32
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|x64.ActiveCfg = VSDebug|x64
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|x64.Build.0 = VSDebug|x64
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|Win32.ActiveCfg = Release|Win32
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|Win32.Build.0 = Release|Win32
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|x64.ActiveCfg = Release|x64
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|x64.Build.0 = Release|x64
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|Win32.Build.0 = VSDebug|Win32
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|x64.ActiveCfg = VSDebug|x64
-		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|x64.Build.0 = VSDebug|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
