@@ -11,6 +11,7 @@
 /msvscpp/.vs/*
 /*.lastbuildstate
 /msvscpp/libewf.VC.db
+/msvscpp/libewf.VC.VC.opendb
 /msvscpp/ipch/*
 /msvscpp/scripts
 /msvscpp/*.suo
