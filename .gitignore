@@ -20,6 +20,7 @@
 /msvscpp/Release/*
 /msvscpp/VSDebug/*
 /msvscpp/x64/*
+x64/
 
 /msvscpp/bzip2_dll/Debug/*
 /msvscpp/ewf.net/Debug/*
