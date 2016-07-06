@@ -57,6 +57,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ewfrecover", "ewfrecover\ew
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcdata", "libcdata\libcdata.vcxproj", "{B9332DC8-7594-47DF-80C1-38922E0F4DFB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pyewf", "pyewf\pyewf.vcxproj", "{E221DB4C-B254-47CB-993D-DC7FED580DA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Win32 = Release|Win32
@@ -289,6 +291,14 @@ Global
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|Win32.Build.0 = VSDebug|Win32
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|x64.ActiveCfg = VSDebug|x64
 		{B9332DC8-7594-47DF-80C1-38922E0F4DFB}.VSDebug|x64.Build.0 = VSDebug|x64
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|Win32.ActiveCfg = Release|Win32
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|Win32.Build.0 = Release|Win32
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|x64.ActiveCfg = Release|x64
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.Release|x64.Build.0 = Release|x64
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|Win32.ActiveCfg = VSDebug|Win32
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|Win32.Build.0 = VSDebug|Win32
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|x64.ActiveCfg = VSDebug|x64
+		{E221DB4C-B254-47CB-993D-DC7FED580DA1}.VSDebug|x64.Build.0 = VSDebug|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
