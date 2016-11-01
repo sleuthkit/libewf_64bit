@@ -22,6 +22,9 @@
 #if !defined( _COMMON_H )
 #define _COMMON_H
 
+/* Define the earliest supported WINAPI version */
+#define WINVER				0x0501
+
 #if defined( HAVE_CONFIG_H )
 #include <config.h>
 #endif

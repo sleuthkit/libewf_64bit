@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C++ Express 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libewf_dll", "libewf_dll\libewf_dll.vcxproj", "{B5225323-AC67-411D-8FBA-199E9467FAB5}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ewfverify", "ewfverify\ewfverify.vcxproj", "{E47BC48E-4CDC-49CC-B82E-4468DE2540DE}"
