@@ -1,4 +1,6 @@
 libewf_64bit
 ============
 
-Copy of the libewf source code that is configured for a 64-bit MS Visual Studio build.
+This is a fork of the libewf (https://github.com/libyal/libewf) code that has been configured for:
+- 64-bit builds
+- MS Visual Studio 2015
