@@ -100,7 +100,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>advapi32.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <OutputFile>$(OutDir)libewf.dll</OutputFile>
+      <OutputFile>$(OutDir)libewf_dll.dll</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
       <DataExecutionPrevention>
