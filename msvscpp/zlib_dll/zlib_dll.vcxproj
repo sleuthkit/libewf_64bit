@@ -121,7 +121,7 @@
       </DebugInformationFormat>
     </ClCompile>
     <Link>
-      <OutputFile>$(OutDir)zlib.dll</OutputFile>
+      <OutputFile>$(OutDir)zlib_dll.dll</OutputFile>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>
