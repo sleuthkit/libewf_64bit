@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>libewf</id>
+    <version>20130416</version>
+    <title>org.sleuthkit.libewf</title>
+    <authors>Joachim Metz</authors>
+    <owners>Joachim Metz</owners>
+    <license type="expression">LGPL-3.0-only</license>
+    <projectUrl>https://github.com/libyal/libewf</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>libewf is a library to access the Expert Witness Compression Format (EWF).</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright (c) 2006-2013, Joachim Metz, joachim.metz@gmail.com</copyright>
+    <tags>Native, native</tags>
+	<repository type="git" url="https://github.com/sleuthkit/libewf_64bit"/>
+  </metadata>
+  <files>
+	<file src="libewf.targets" target="build\native\libewf.targets"/>
+    <file src="include\**\*.*" target="build\native\include"/>
+    <file src="msvscpp\x64\Release\**\*.*" target="build\native\msvscpp\x64\Release" />
+	<file src="msvscpp\Release\**\*.*" target="build\native\msvscpp\Release" />
+  </files>
+</package>
