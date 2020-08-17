@@ -1,49 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ImportGroup Label="PropertySheets"/>
-    <PropertyGroup>
-    </PropertyGroup>
-    	<ItemDefinitionGroup>
-		<ClCompile>
-			<AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-		</ClCompile>
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Label="x64 Release" Condition="'$(Platform)' == 'x64' And '$(Configuration)' == 'Release'">
-	
-		<Link>
-			<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>libewf.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-		</Link>
-		<PostBuildEvent>
-			<Command>xcopy /Y "$(MSBuildThisFileDirectory)\msvscpp\x64\Release\*.dll" "$(OutDir)"</Command>
-		</PostBuildEvent>
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Label="x64 Debug" Condition="'$(Platform)' == 'x64' And '$(Configuration)' == 'Debug'">
-	
-		<Link>
-			<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>libewf.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-		</Link>
-		<PostBuildEvent>
-			<Command>xcopy /Y "$(MSBuildThisFileDirectory)\msvscpp\x64\Release\*.dll" "$(OutDir)"</Command>
-		</PostBuildEvent>
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Label="Win32 Release" Condition="'$(Platform)' == 'Win32' And '$(Configuration)' == 'Release'">
-		<Link>
-			<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>libewf.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-		</Link>
-		<PostBuildEvent>
-			<Command>xcopy /Y "$(MSBuildThisFileDirectory)\msvscpp\Release\*.dll" "$(OutDir)"</Command>
-		</PostBuildEvent>
-	</ItemDefinitionGroup>
-	<ItemDefinitionGroup Label="Win32 Debug" Condition="'$(Platform)' == 'Win32' And '$(Configuration)' == 'Debug'">
-		<Link>
-			<AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-			<AdditionalDependencies>libewf.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-		</Link>
-		<PostBuildEvent>
-			<Command>xcopy /Y "$(MSBuildThisFileDirectory)\msvscpp\Release\*.dll" "$(OutDir)"</Command>
-		</PostBuildEvent>
-	</ItemDefinitionGroup>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- general -->
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\x64\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>	
+
+  <ItemDefinitionGroup Condition="'$(Platform)' == 'win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>	
+	<Link Condition="'$(Platform)' == 'win32'">
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)msvscpp\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <!-- static libraries -->
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>libewf.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemGroup>
+      <LibEwfDlls Include="$(MSBuildThisFileDirectory)\msvscpp\x64\Release\*.dll" Condition="'$(Platform)' == 'x64'"/>
+      <LibEwfDlls Include="$(MSBuildThisFileDirectory)\msvscpp\Release\*.dll" Condition="'$(Platform)' == 'Win32'"/>
+  </ItemGroup>
+
+  <!-- dynamic libraries -->
+  <Target Name="libewf_AfterBuild" AfterTargets="AfterBuild">
+    <Copy SourceFiles="@(LibEwfDlls)"    DestinationFolder="$(TargetDir)"    SkipUnchangedFiles="true" />
+  </Target>
 </Project>
